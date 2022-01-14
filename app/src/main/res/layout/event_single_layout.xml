@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:drawable/dialog_holo_light_frame"
+    android:gravity="left|right">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:alpha="0.6"
+        android:background="@color/secondaryDarkColor"
+        app:layout_constraintBottom_toBottomOf="@+id/comment_text"
+        app:layout_constraintEnd_toEndOf="@+id/comment_text"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/comment_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:text="Display Name"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/event_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/comment_text"
+        android:layout_alignStart="@+id/comment_text"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="3dp"
+        android:gravity="left|center"
+        android:text="User"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/comment_text"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/event_comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/comment_text"
+        android:layout_alignEnd="@+id/comment_text"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="3dp"
+        android:gravity="right"
+        android:text="Comments"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/comment_text"
+        app:layout_constraintEnd_toEndOf="@+id/comment_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

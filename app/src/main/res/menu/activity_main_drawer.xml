@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_matchcenter"
+            android:icon="@drawable/football"
+            android:title="Match Center" />
+        <item
+            android:id="@+id/nav_beiträge"
+            android:icon="@drawable/message"
+            android:title="Beiträge" />
+        <item
+            android:id="@+id/nav_transfers"
+            android:icon="@drawable/transfers"
+            android:title="Transfergerüchte" />
+        <item
+            android:id="@+id/nav_survey"
+            android:icon="@drawable/umfrage"
+            android:title="Umfrage" />
+        <item
+            android:id="@+id/nav_table"
+            android:icon="@drawable/table"
+            android:title="Live Tabelle" />
+        <item
+            android:id="@+id/nav_send"
+            android:icon="@drawable/profile"
+            android:title="Profil" />
+    </group>
+
+</menu>

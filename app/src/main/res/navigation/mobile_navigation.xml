@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_matchcenter">
+
+    <fragment
+        android:id="@+id/nav_table"
+        android:name="silverbeach.rbleipzigsupport.ui.table.TableFragment"
+        android:label="Live Tabelle"
+        tools:layout="@layout/fragment_table" />
+
+    <fragment
+        android:id="@+id/nav_beiträge"
+        android:name="silverbeach.rbleipzigsupport.ui.posts.PostsFragment"
+        android:label="Beiträge"
+        tools:layout="@layout/fragment_posts" />
+
+    <fragment
+        android:id="@+id/nav_transfers"
+        android:name="silverbeach.rbleipzigsupport.ui.transfers.TransfersFragment"
+        android:label="Transfergerüchte"
+        tools:layout="@layout/fragment_transfers" />
+
+    <fragment
+        android:id="@+id/nav_matchcenter"
+        android:name="silverbeach.rbleipzigsupport.ui.match.MatchFragment"
+        android:label="Match Center"
+        tools:layout="@layout/fragment_match" />
+
+    <fragment
+        android:id="@+id/nav_survey"
+        android:name="silverbeach.rbleipzigsupport.ui.survey.SurveyFragment"
+        android:label="Umfrage"
+        tools:layout="@layout/fragment_survey" />
+
+    <fragment
+        android:id="@+id/nav_send"
+        android:name="silverbeach.rbleipzigsupport.ui.profile.SettingsFragment"
+        android:label="Profil"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
