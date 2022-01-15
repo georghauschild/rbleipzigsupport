@@ -332,7 +332,7 @@ public class MatchFragment extends Fragment {
                         ImageAway.setImageResource(R.drawable.wno);
                         break;
                     case "1":
-                        ImageAway.setImageResource(R.drawable.wrbl);
+                        ImageAway.setImageResource(R.drawable.wleipzignew);
                         break;
                     case "2":
                         ImageAway.setImageResource(R.drawable.wberlin);
