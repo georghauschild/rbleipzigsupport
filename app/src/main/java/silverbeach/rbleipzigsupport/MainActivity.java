@@ -29,6 +29,8 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import android.util.Log;
 import android.view.Menu;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import hotchemi.android.rate.AppRate;
@@ -59,13 +61,17 @@ public class MainActivity extends AppCompatActivity {
         adapter = new FragmentAdapter(fm, getLifecycle());
         pager2.setAdapter(adapter);
 
-        tabLayout.addTab(tabLayout.newTab().setText("Match"));
-        tabLayout.addTab(tabLayout.newTab().setText("Transfer"));
-        tabLayout.addTab(tabLayout.newTab().setText("Posts"));
-        tabLayout.addTab(tabLayout.newTab().setText("Umfrage"));
-        tabLayout.addTab(tabLayout.newTab().setText("Profil"));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.poll));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.transfer));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.soccer));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.forum));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.profile));
 
-       // selectPage(2);
+        //set default tap the middle tap without smoth scroll
+        pager2.setCurrentItem(2,false);
+        tabLayout.getTabAt(2).select();
+
+
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

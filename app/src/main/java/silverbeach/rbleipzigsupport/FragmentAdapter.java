@@ -22,14 +22,14 @@ public class FragmentAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
 
         switch (position){
-            case 1: return new MatchFragment();
-            case 2: return new TransfersFragment();
-            case 3: return new SurveyFragment();
+            case 1: return new TransfersFragment();
+            case 2: return new MatchFragment();
+            case 3: return new PostsFragment();
             case 4: return new SettingsFragment();
 
         }
 
-        return new PostsFragment();
+        return new SurveyFragment();
     }
 
     @Override
