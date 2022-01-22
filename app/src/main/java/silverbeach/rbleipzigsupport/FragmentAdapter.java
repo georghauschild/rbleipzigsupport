@@ -7,6 +7,7 @@ import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import silverbeach.rbleipzigsupport.ui.match.MatchFragment;
+import silverbeach.rbleipzigsupport.ui.news.NewsFragment;
 import silverbeach.rbleipzigsupport.ui.posts.PostsFragment;
 import silverbeach.rbleipzigsupport.ui.profile.SettingsFragment;
 import silverbeach.rbleipzigsupport.ui.survey.SurveyFragment;
@@ -22,14 +23,14 @@ public class FragmentAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
 
         switch (position){
-            case 1: return new TransfersFragment();
-            case 2: return new MatchFragment();
-            case 3: return new PostsFragment();
-            case 4: return new SettingsFragment();
+            case 1: return new PostsFragment();
+            case 2: return new TransfersFragment();
+            case 3: return new NewsFragment();
+            case 4: return new SurveyFragment();
 
         }
 
-        return new SurveyFragment();
+        return new MatchFragment();
     }
 
     @Override

@@ -22,417 +22,258 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/transferTV1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/colorPrimaryDark"
-                android:padding="15dp"
-                android:text="Transfer News - Kein Internet"
-                android:textColor="@android:color/background_light" />
-
-            <TableRow
-                android:id="@+id/t1"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="10">
+                android:layout_margin="10dp"
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/p1"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/name1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:background="@android:color/holo_green_dark"
-                    android:text="+1"
-                    android:textColor="@color/primaryTextColor"
-                    android:textSize="36sp" />
-
-                <Button
-                    android:id="@+id/n1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
                     android:background="@color/secondaryDarkColor"
-                    android:text="-1"
+                    android:padding="10dp"
                     android:textColor="@color/primaryTextColor"
-                    android:textSize="36sp" />
-            </TableRow>
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/transferTV2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/colorPrimaryDark"
-                android:padding="15dp"
-                android:text="Transfer News - Kein Internet"
-                android:textColor="@android:color/background_light" />
+                <TextView
+                    android:id="@+id/transferTV1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primaryTextColor"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
 
-            <TableRow
-                android:id="@+id/t2"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="10">
+                android:layout_margin="10dp"
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/p2"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/name2"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:background="@android:color/holo_green_dark"
-                    android:text="+1"
-                    android:textColor="@color/primaryTextColor"
-                    android:textSize="36sp" />
-
-                <Button
-                    android:id="@+id/n2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
                     android:background="@color/secondaryDarkColor"
-                    android:text="-1"
+                    android:padding="10dp"
                     android:textColor="@color/primaryTextColor"
-                    android:textSize="36sp" />
-            </TableRow>
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/transferTV3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/colorPrimaryDark"
-                android:padding="15dp"
-                android:text="Transfer News - Kein Internet"
-                android:textColor="@android:color/background_light" />
+                <TextView
+                    android:id="@+id/transferTV2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primaryTextColor"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
 
-            <TableRow
-                android:id="@+id/t3"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="10">
+                android:layout_margin="10dp"
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/p3"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/name3"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:background="@android:color/holo_green_dark"
-                    android:text="+1"
-                    android:textColor="@color/primaryTextColor"
-                    android:textSize="36sp" />
-
-                <Button
-                    android:id="@+id/n3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
                     android:background="@color/secondaryDarkColor"
-                    android:text="-1"
+                    android:padding="10dp"
                     android:textColor="@color/primaryTextColor"
-                    android:textSize="36sp" />
-            </TableRow>
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/transferTV4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/colorPrimaryDark"
-                android:padding="15dp"
-                android:text="Transfer News - Kein Internet"
-                android:textColor="@android:color/background_light" />
+                <TextView
+                    android:id="@+id/transferTV3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primaryTextColor"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
 
-            <TableRow
-                android:id="@+id/t4"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="10">
+                android:layout_margin="10dp"
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/p4"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/name4"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:background="@android:color/holo_green_dark"
-                    android:text="+1"
-                    android:textColor="@color/primaryTextColor"
-                    android:textSize="36sp" />
-
-                <Button
-                    android:id="@+id/n4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
                     android:background="@color/secondaryDarkColor"
-                    android:text="-1"
+                    android:padding="10dp"
                     android:textColor="@color/primaryTextColor"
-                    android:textSize="36sp" />
-            </TableRow>
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/transferTV5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/colorPrimaryDark"
-                android:padding="15dp"
-                android:text="Transfer News - Kein Internet"
-                android:textColor="@android:color/background_light" />
+                <TextView
+                    android:id="@+id/transferTV4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primaryTextColor"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
 
-            <TableRow
-                android:id="@+id/t5"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="10">
+                android:layout_margin="10dp"
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/p5"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/name5"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:background="@android:color/holo_green_dark"
-                    android:text="+1"
-                    android:textColor="@color/primaryTextColor"
-                    android:textSize="36sp" />
-
-                <Button
-                    android:id="@+id/n5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
                     android:background="@color/secondaryDarkColor"
-                    android:text="-1"
+                    android:padding="10dp"
                     android:textColor="@color/primaryTextColor"
-                    android:textSize="36sp" />
-            </TableRow>
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/transferTV6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/colorPrimaryDark"
-                android:padding="15dp"
-                android:text="Transfer News - Kein Internet"
-                android:textColor="@android:color/background_light" />
+                <TextView
+                    android:id="@+id/transferTV5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primaryTextColor"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
 
-            <TableRow
-                android:id="@+id/t6"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="10">
+                android:layout_margin="10dp"
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/p6"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/name6"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:background="@android:color/holo_green_dark"
-                    android:text="+1"
-                    android:textColor="@color/primaryTextColor"
-                    android:textSize="36sp" />
-
-                <Button
-                    android:id="@+id/n6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
                     android:background="@color/secondaryDarkColor"
-                    android:text="-1"
+                    android:padding="10dp"
                     android:textColor="@color/primaryTextColor"
-                    android:textSize="36sp" />
-            </TableRow>
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/transferTV7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/colorPrimaryDark"
-                android:padding="15dp"
-                android:text="Transfer News - Kein Internet"
-                android:textColor="@android:color/background_light" />
+                <TextView
+                    android:id="@+id/transferTV6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primaryTextColor"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
 
-            <TableRow
-                android:id="@+id/t7"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="10">
+                android:layout_margin="10dp"
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/p7"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/name7"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:background="@android:color/holo_green_dark"
-                    android:text="+1"
-                    android:textColor="@color/primaryTextColor"
-                    android:textSize="36sp" />
-
-                <Button
-                    android:id="@+id/n7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
                     android:background="@color/secondaryDarkColor"
-                    android:text="-1"
+                    android:padding="10dp"
                     android:textColor="@color/primaryTextColor"
-                    android:textSize="36sp" />
-            </TableRow>
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/transferTV8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/colorPrimaryDark"
-                android:padding="15dp"
-                android:text="Transfer News - Kein Internet"
-                android:textColor="@android:color/background_light" />
+                <TextView
+                    android:id="@+id/transferTV7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primaryTextColor"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
 
-            <TableRow
-                android:id="@+id/t8"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="10">
+                android:layout_margin="10dp"
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/p8"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/name8"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:background="@android:color/holo_green_dark"
-                    android:text="+1"
-                    android:textColor="@color/primaryTextColor"
-                    android:textSize="36sp" />
-
-                <Button
-                    android:id="@+id/n8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
                     android:background="@color/secondaryDarkColor"
-                    android:text="-1"
+                    android:padding="10dp"
                     android:textColor="@color/primaryTextColor"
-                    android:textSize="36sp" />
-            </TableRow>
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/transferTV9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/colorPrimaryDark"
-                android:padding="15dp"
-                android:text="Transfer News - Kein Internet"
-                android:textColor="@android:color/background_light" />
+                <TextView
+                    android:id="@+id/transferTV8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primaryTextColor"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
 
-            <TableRow
-                android:id="@+id/t9"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="10">
+                android:layout_margin="10dp"
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/p9"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/name9"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:background="@android:color/holo_green_dark"
-                    android:text="+1"
-                    android:textColor="@color/primaryTextColor"
-                    android:textSize="36sp" />
-
-                <Button
-                    android:id="@+id/n9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
                     android:background="@color/secondaryDarkColor"
-                    android:text="-1"
+                    android:padding="10dp"
                     android:textColor="@color/primaryTextColor"
-                    android:textSize="36sp" />
-            </TableRow>
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/transferTV10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/colorPrimaryDark"
-                android:padding="15dp"
-                android:text="Transfer News - Kein Internet"
-                android:textColor="@android:color/background_light" />
-
-            <TableRow
-                android:id="@+id/t10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="10">
-
-                <Button
-                    android:id="@+id/p10"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/transferTV9"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:background="@android:color/holo_green_dark"
-                    android:text="+1"
-                    android:textColor="@color/primaryTextColor"
-                    android:textSize="36sp" />
+                    android:background="@color/primaryTextColor"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
 
-                <Button
-                    android:id="@+id/n10"
-                    android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name10"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="5"
                     android:background="@color/secondaryDarkColor"
-                    android:text="-1"
+                    android:padding="10dp"
                     android:textColor="@color/primaryTextColor"
-                    android:textSize="36sp" />
-            </TableRow>
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/transferTV10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primaryTextColor"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>

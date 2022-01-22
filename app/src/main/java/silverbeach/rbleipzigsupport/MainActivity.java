@@ -61,17 +61,11 @@ public class MainActivity extends AppCompatActivity {
         adapter = new FragmentAdapter(fm, getLifecycle());
         pager2.setAdapter(adapter);
 
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.poll));
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.transfer));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.soccer));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.forum));
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.profile));
-
-        //set default tap the middle tap without smoth scroll
-        pager2.setCurrentItem(2,false);
-        tabLayout.getTabAt(2).select();
-
-
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.transfer));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.newspaper));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.poll));
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

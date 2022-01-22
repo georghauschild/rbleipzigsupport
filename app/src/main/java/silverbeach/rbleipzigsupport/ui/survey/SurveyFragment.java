@@ -62,10 +62,6 @@ public class SurveyFragment extends Fragment {
         bresult.setVisibility(View.INVISIBLE);
         final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
-
-
-
-
         //informationen aus server laden und anzeigen
         // mDatabase.keepSynced(true);
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Survey");
@@ -204,8 +200,6 @@ public class SurveyFragment extends Fragment {
                 startActivity(newIntent4);
             }
         });
-
-
 
         return mMainView;
     }

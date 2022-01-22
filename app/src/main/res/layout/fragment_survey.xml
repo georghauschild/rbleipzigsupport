@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/colorPrimary"
     tools:context=".ui.survey.SurveyFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -37,6 +37,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/primaryTextColor"
             android:text="Button"
+            android:textColor="@android:color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/survey2" />
@@ -48,6 +49,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/primaryTextColor"
             android:text="Button"
+            android:textColor="@android:color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/survey3" />
@@ -59,6 +61,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/primaryTextColor"
             android:text="Button"
+            android:textColor="@android:color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/survey4" />
@@ -70,6 +73,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/primaryTextColor"
             android:text="Button"
+            android:textColor="@android:color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/survey1" />
@@ -81,6 +85,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/primaryTextColor"
             android:text="Button"
+            android:textColor="@android:color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/survey5" />
@@ -93,6 +98,7 @@
             android:layout_marginTop="8dp"
             android:backgroundTint="@color/primaryTextColor"
             android:text="Button"
+            android:textColor="@android:color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
