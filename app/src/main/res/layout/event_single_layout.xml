@@ -11,7 +11,6 @@
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="22dp"
-        android:alpha="0.6"
         android:background="@color/secondaryDarkColor"
         app:layout_constraintBottom_toBottomOf="@+id/comment_text"
         app:layout_constraintEnd_toEndOf="@+id/comment_text"
