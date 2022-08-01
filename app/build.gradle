@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 30
     defaultConfig {
         applicationId "silverbeach.rbleipzigsupport"
-        minSdkVersion 21
-        targetSdkVersion 28
-        versionCode 40
-        versionName "3.0"
+        minSdkVersion 30
+        targetSdkVersion 30
+        versionCode 41
+        versionName "4.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -20,6 +20,9 @@ android {
     sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
     buildFeatures {
         viewBinding true
+    }
+    lintOptions {
+        checkReleaseBuilds false
     }
 }
 
