@@ -42,7 +42,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-import silverbeach.rbleipzigsupport.MainActivity;
 import silverbeach.rbleipzigsupport.MainScreen;
 import silverbeach.rbleipzigsupport.ProfileActivity;
 import silverbeach.rbleipzigsupport.R;

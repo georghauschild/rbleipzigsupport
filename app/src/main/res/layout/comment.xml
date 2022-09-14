@@ -13,6 +13,6 @@ android:layout_height="match_parent">
         android:paddingRight="5dp"
         android:paddingBottom="2dp"
         android:text="Kommentar"
-        android:textColor="@android:color/background_light"
+        android:textColor="@android:color/black"
         android:textSize="18sp" />
 </LinearLayout>

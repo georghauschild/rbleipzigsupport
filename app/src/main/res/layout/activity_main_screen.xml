@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,15 +7,34 @@
     android:background="@color/colorPrimaryDark"
     android:orientation="vertical">
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/primaryTextColor">
+        android:background="@color/colorPrimaryDark">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/secondaryDarkColor"
+                android:ellipsize="middle"
+                android:gravity="center"
+                android:text="Match Hype"
+                android:textColor="@color/primaryTextColor" />
+
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/secondaryDarkColor"
+                android:progress="70"
+                android:progressTint="@color/secondaryLightColor" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -23,35 +42,36 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageView4"
+                    android:id="@+id/ImageHome"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@color/secondaryDarkColor"
-                    app:srcCompat="@drawable/wparis" />
+                    app:srcCompat="@drawable/wleipzignew" />
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/countdownTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:autoSizeTextType="uniform"
                     android:background="@color/secondaryDarkColor"
+                    android:fontFamily="sans-serif-black"
                     android:text="1d 22h 18m 29s"
                     android:textAlignment="center"
                     android:textColor="@color/primaryTextColor" />
 
                 <ImageView
-                    android:id="@+id/imageView5"
+                    android:id="@+id/ImageAway"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@color/secondaryDarkColor"
-                    app:srcCompat="@drawable/wdortmund" />
+                    app:srcCompat="@drawable/wbarcelona" />
             </LinearLayout>
 
             <TextView
-                android:id="@+id/info2Tv2"
+                android:id="@+id/clubsTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/primaryTextColor"
@@ -64,7 +84,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/background" />
 
             <TextView
-                android:id="@+id/info3Tv2"
+                android:id="@+id/competitionTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/secondaryLightColor"
@@ -76,13 +96,27 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/info2Tv" />
 
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/viewPager2"
+            <ListView
+                android:id="@+id/listView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingStart="-30dp" />
+                android:layout_height="200dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:drawable/editbox_dropdown_light_frame" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/myViewPager2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
 
         </LinearLayout>
-    </ScrollView>
+    </RelativeLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

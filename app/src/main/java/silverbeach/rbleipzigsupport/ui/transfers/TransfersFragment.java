@@ -1,6 +1,4 @@
 package silverbeach.rbleipzigsupport.ui.transfers;
-
-
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -34,7 +32,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import silverbeach.rbleipzigsupport.R;
-
 
 public class TransfersFragment extends Fragment {
 

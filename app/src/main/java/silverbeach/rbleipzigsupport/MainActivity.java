@@ -2,16 +2,10 @@ package silverbeach.rbleipzigsupport;
 
 import android.content.Context;
 import android.content.Intent;
-import android.media.effect.Effect;
 import android.os.Bundle;
 
 import androidx.fragment.app.FragmentManager;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
-import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -23,17 +17,11 @@ import com.google.firebase.database.ServerValue;
 import com.google.firebase.database.ValueEventListener;
 
 
-import androidx.drawerlayout.widget.DrawerLayout;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.VibrationEffect;
 import android.util.Log;
-import android.view.Menu;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Toast;
 
 import hotchemi.android.rate.AppRate;
