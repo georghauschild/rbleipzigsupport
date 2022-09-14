@@ -1,6 +1,8 @@
 package silverbeach.rbleipzigsupport;
 
+import android.content.Context;
 import android.content.Intent;
+import android.media.effect.Effect;
 import android.os.Bundle;
 
 import androidx.fragment.app.FragmentManager;
@@ -27,6 +29,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.os.VibrationEffect;
 import android.util.Log;
 import android.view.Menu;
 import android.view.Window;
@@ -35,6 +38,7 @@ import android.widget.Toast;
 
 import hotchemi.android.rate.AppRate;
 import hotchemi.android.rate.OnClickButtonListener;
+import android.os.Vibrator;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -71,11 +75,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 pager2.setCurrentItem(tab.getPosition());
+
+
             }
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-
+                Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                v.vibrate(VibrationEffect.createOneShot(1,75));
             }
 
             @Override

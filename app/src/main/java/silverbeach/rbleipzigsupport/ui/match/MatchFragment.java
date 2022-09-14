@@ -43,6 +43,7 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import silverbeach.rbleipzigsupport.MainActivity;
+import silverbeach.rbleipzigsupport.MainScreen;
 import silverbeach.rbleipzigsupport.ProfileActivity;
 import silverbeach.rbleipzigsupport.R;
 import silverbeach.rbleipzigsupport.StartActivity;
@@ -105,6 +106,7 @@ public class MatchFragment extends Fragment {
             public void onClick(View view) {
                 uploadComment();
                 hideKeyboard(getActivity());
+
             }
         });
         sendBtn.setOnLongClickListener(new View.OnLongClickListener() {
@@ -112,7 +114,7 @@ public class MatchFragment extends Fragment {
             public boolean onLongClick(View v) {
 
                 if (rank.equals("admin")){
-                    Intent newIntentA = new Intent(getActivity(), CreateMatchActivity.class);
+                    Intent newIntentA = new Intent(getActivity(), MainScreen.class);
                     startActivity(newIntentA);
 
 
