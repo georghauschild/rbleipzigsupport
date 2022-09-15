@@ -1,6 +1,6 @@
 package silverbeach.rbleipzigsupport;
 
-class Comment2 {
+public class Comment2 {
 
     private String commentText, user, uid;
 

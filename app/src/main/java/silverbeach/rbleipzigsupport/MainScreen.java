@@ -10,8 +10,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -25,17 +30,22 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import silverbeach.rbleipzigsupport.ui.MatchActivity;
 import silverbeach.rbleipzigsupport.ui.news.News1Fragment;
 import silverbeach.rbleipzigsupport.ui.news.News2Fragment;
 import silverbeach.rbleipzigsupport.ui.news.News3Fragment;
 import silverbeach.rbleipzigsupport.ui.news.News4Fragment;
 import silverbeach.rbleipzigsupport.ui.news.News5Fragment;
+import silverbeach.rbleipzigsupport.ui.news.NewsFragment;
 import silverbeach.rbleipzigsupport.ui.posts.PostsFragment;
+import silverbeach.rbleipzigsupport.ui.profile.SettingsFragment;
+import silverbeach.rbleipzigsupport.ui.survey.SurveyFragment;
+import silverbeach.rbleipzigsupport.ui.transfers.TransfersFragment;
 
 public class MainScreen extends AppCompatActivity {
 
-    ViewPager2 myViewPager2;
-    Adapter myAdapter;
+    ViewPager2 myViewPager2, bottomViewPager2;
+    Adapter myAdapter, myAdapter2;
     private ImageView ImageHome, ImageAway;
     public TextView countdownTV, clubsTV, competitionTV;
     private DatabaseReference mDatabase, mUserDatabase;
@@ -49,7 +59,8 @@ public class MainScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
         myViewPager2 = findViewById(R.id.myViewPager2);
-
+        bottomViewPager2 = findViewById(R.id.bottomViewPager2);
+        listView = findViewById(R.id.listView);
 
         try
         {
@@ -62,32 +73,50 @@ public class MainScreen extends AppCompatActivity {
         countdownTV = (TextView) findViewById(R.id.countdownTextView);
         clubsTV = (TextView) findViewById(R.id.clubsTextView);
         competitionTV = (TextView) findViewById(R.id.competitionTextView);
-        listView = (ListView) findViewById(R.id.listView);
 
         myAdapter = new Adapter(getSupportFragmentManager(), getLifecycle());
+        myAdapter2 = new Adapter(getSupportFragmentManager(), getLifecycle());
         myViewPager2.setOffscreenPageLimit(1);
+        bottomViewPager2.setOffscreenPageLimit(1);
         int pageMarginPx = getResources().getDimensionPixelOffset(R.dimen.fab_margin);
         int peekMarginPx = getResources().getDimensionPixelOffset(R.dimen.text_margin);
 
         RecyclerView rv = (RecyclerView) myViewPager2.getChildAt(0);
+        RecyclerView rv2 = (RecyclerView) bottomViewPager2.getChildAt(0);
         rv.setClipToPadding(false);
+        rv2.setClipToPadding(false);
         int padding = peekMarginPx + pageMarginPx;
         rv.setPadding(padding, 0, padding, 0);
+        rv2.setPadding(padding, 0, padding, 0);
 
         // add Fragments in your ViewPagerFragmentAdapter class
-        myAdapter.addFragment(new News1Fragment());
-        myAdapter.addFragment(new News2Fragment());
-        myAdapter.addFragment(new News3Fragment());
-        myAdapter.addFragment(new News4Fragment());
-        myAdapter.addFragment(new News5Fragment());
+      //  myAdapter.addFragment(new News1Fragment());
+      //  myAdapter.addFragment(new News2Fragment());
+      //  myAdapter.addFragment(new News3Fragment());
+      //  myAdapter.addFragment(new News4Fragment());
+      //  myAdapter.addFragment(new News5Fragment());
+
+        myAdapter2.addFragment(new NewsFragment());
+        myAdapter2.addFragment(new TransfersFragment());
+        myAdapter2.addFragment(new SurveyFragment());
 
 
         // set Orientation in your ViewPager2
         myViewPager2.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
         myViewPager2.setAdapter(myAdapter);
         myViewPager2.getOffscreenPageLimit();
+        bottomViewPager2.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
+        bottomViewPager2.setAdapter(myAdapter2);
+        bottomViewPager2.getOffscreenPageLimit();
 
-        getSupportFragmentManager().beginTransaction().add(R.id.frameLayout,new PostsFragment()).commit();
+        bottomViewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                v.vibrate(VibrationEffect.createOneShot(1,75));
+            }
+        });
 
         setComments();
 
@@ -116,6 +145,15 @@ public class MainScreen extends AppCompatActivity {
                 listView.setAdapter(adapter);
                 //scroll to bottom
                 listView.setSelection(adapter.getCount() - 1);
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                        v.vibrate(VibrationEffect.createOneShot(1,75));
+                        Intent startIntent = new Intent(MainScreen.this, MatchActivity.class);
+                        startActivity(startIntent);
+                    }
+                });
             }
 
             @Override
@@ -151,6 +189,3 @@ class Adapter extends FragmentStateAdapter {
         return fragmentList.size();
     }
 }
-
-
-

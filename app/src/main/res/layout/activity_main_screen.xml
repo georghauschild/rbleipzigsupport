@@ -17,25 +17,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/secondaryDarkColor"
-                android:ellipsize="middle"
-                android:gravity="center"
-                android:text="Match Hype"
-                android:textColor="@color/primaryTextColor" />
-
-            <ProgressBar
-                android:id="@+id/progressBar2"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/secondaryDarkColor"
-                android:progress="70"
-                android:progressTint="@color/secondaryLightColor" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -44,7 +25,7 @@
                 <ImageView
                     android:id="@+id/ImageHome"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="150dp"
                     android:layout_weight="1"
                     android:background="@color/secondaryDarkColor"
                     app:srcCompat="@drawable/wleipzignew" />
@@ -52,19 +33,20 @@
                 <TextView
                     android:id="@+id/countdownTextView"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="150dp"
                     android:layout_weight="1"
                     android:autoSizeTextType="uniform"
                     android:background="@color/secondaryDarkColor"
                     android:fontFamily="sans-serif-black"
                     android:text="1d 22h 18m 29s"
                     android:textAlignment="center"
-                    android:textColor="@color/primaryTextColor" />
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="10sp" />
 
                 <ImageView
                     android:id="@+id/ImageAway"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="150dp"
                     android:layout_weight="1"
                     android:background="@color/secondaryDarkColor"
                     app:srcCompat="@drawable/wbarcelona" />
@@ -109,12 +91,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <FrameLayout
-                android:id="@+id/frameLayout"
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/bottomViewPager2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            </FrameLayout>
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
     </RelativeLayout>

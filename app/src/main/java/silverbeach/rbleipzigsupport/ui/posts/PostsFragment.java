@@ -3,11 +3,9 @@ package silverbeach.rbleipzigsupport.ui.posts;
 
 import android.content.Intent;
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Parcelable;
 import android.os.Vibrator;
 import android.view.LayoutInflater;
@@ -15,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
@@ -23,7 +20,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import silverbeach.rbleipzigsupport.R;
 
 
@@ -79,7 +75,6 @@ public class PostsFragment extends Fragment {
     public void onStart() {
         super.onStart();
 
-
         FirebaseRecyclerAdapter<Events, EventsViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Events, EventsViewHolder>(
 
                 Events.class,
@@ -91,7 +86,6 @@ public class PostsFragment extends Fragment {
             @Override
             protected void populateViewHolder(final EventsViewHolder eventsViewHolder, final Events events, int i) {
 
-
                 final String list_event_id = getRef(i).getKey();
 
                 mEventsDatabase.child(list_event_id).addValueEventListener(new ValueEventListener() {
@@ -101,7 +95,6 @@ public class PostsFragment extends Fragment {
 
                             return;
                         }
-
 
                         String eventName = null;
                         String eventUser = null;
@@ -125,7 +118,6 @@ public class PostsFragment extends Fragment {
                                 uid= "NO";
                             }
 
-
                         } catch (Exception e) {
                             // This will catch any exception, because they are all descended from Exception
                             System.out.println("Error " + e.getMessage());
@@ -140,8 +132,6 @@ public class PostsFragment extends Fragment {
                         eventsViewHolder.setEventText(eventUser);
                         eventsViewHolder.setEventImage(eventCounter);
                         eventsViewHolder.setEventComments(eventComments + "");
-
-
 
                         final long finalEventComments = eventComments;
                         final String finalEventUser = eventUser;
@@ -191,15 +181,11 @@ public class PostsFragment extends Fragment {
 
         firebaseRecyclerAdapter.notifyDataSetChanged();
         mEventList.setAdapter(firebaseRecyclerAdapter);
-
-
-
-
     }
 
     public static class EventsViewHolder extends RecyclerView.ViewHolder {
 
-        View mView2;
+        public View mView2;
 
         public EventsViewHolder(View itemView2) {
             super(itemView2);
