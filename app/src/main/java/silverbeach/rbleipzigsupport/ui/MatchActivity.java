@@ -137,7 +137,7 @@ public class MatchActivity extends AppCompatActivity {
         comment2 = new Comment2();
         list = new ArrayList<>();
         uid_list = new ArrayList<>();
-        adapter = new ArrayAdapter<String>(MatchActivity.this, R.layout.comment2, R.id.commentText, list);
+        adapter = new ArrayAdapter<String>(MatchActivity.this, R.layout.comment, R.id.commentText, list);
 
 
         mDatabase.addValueEventListener(new ValueEventListener() {

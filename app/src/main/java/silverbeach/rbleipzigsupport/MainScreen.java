@@ -62,6 +62,7 @@ public class MainScreen extends AppCompatActivity {
         bottomViewPager2 = findViewById(R.id.bottomViewPager2);
         listView = findViewById(R.id.listView);
 
+
         try
         {
             this.getSupportActionBar().hide();
@@ -98,7 +99,9 @@ public class MainScreen extends AppCompatActivity {
 
         myAdapter2.addFragment(new NewsFragment());
         myAdapter2.addFragment(new TransfersFragment());
+        myAdapter2.addFragment(new PostsFragment());
         myAdapter2.addFragment(new SurveyFragment());
+        myAdapter2.addFragment(new VariousFragment());
 
 
         // set Orientation in your ViewPager2
@@ -119,6 +122,7 @@ public class MainScreen extends AppCompatActivity {
         });
 
         setComments();
+
 
     }
     private void setComments(){

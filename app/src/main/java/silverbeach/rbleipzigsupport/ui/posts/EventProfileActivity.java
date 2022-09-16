@@ -87,7 +87,7 @@ public class EventProfileActivity extends AppCompatActivity {
         comment = new Comment();
         list = new ArrayList<>();
         uid_list = new ArrayList<>();
-        adapter = new ArrayAdapter<String>(this,R.layout.comment, R.id.commentText, list);
+        adapter = new ArrayAdapter<String>(this,R.layout.comment2, R.id.commentText, list);
 
 
         checkConnection();
