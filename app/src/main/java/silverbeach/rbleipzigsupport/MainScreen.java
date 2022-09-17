@@ -144,15 +144,6 @@ public class MainScreen extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if (counter!=null){
-            counter.cancel();
-        }
-        setCountdown();
-    }
-
     private void setComments(){
         //comments
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Match").child("comments");
