@@ -13,6 +13,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.view.View;
@@ -28,9 +29,14 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 import silverbeach.rbleipzigsupport.ui.MatchActivity;
+import silverbeach.rbleipzigsupport.ui.match.MatchFragment;
 import silverbeach.rbleipzigsupport.ui.news.News1Fragment;
 import silverbeach.rbleipzigsupport.ui.news.News2Fragment;
 import silverbeach.rbleipzigsupport.ui.news.News3Fragment;
@@ -53,6 +59,8 @@ public class MainScreen extends AppCompatActivity {
     private ListView listView;
     private ArrayList<String> list, uid_list;
     private ArrayAdapter<String> adapter;
+    private Long diff, oldLong, NewLong;
+    private MyCount2 counter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +70,8 @@ public class MainScreen extends AppCompatActivity {
         bottomViewPager2 = findViewById(R.id.bottomViewPager2);
         listView = findViewById(R.id.listView);
 
+        setImagesAndInfos();
+        setCountdown();
 
         try
         {
@@ -69,8 +79,8 @@ public class MainScreen extends AppCompatActivity {
         }
         catch (NullPointerException e){}
 
-        ImageHome = (ImageView) findViewById(R.id.imageHomeClub);
-        ImageAway = (ImageView) findViewById(R.id.imageAwayClub);
+        ImageHome = (ImageView) findViewById(R.id.ImageHome);
+        ImageAway = (ImageView) findViewById(R.id.ImageAway);
         countdownTV = (TextView) findViewById(R.id.countdownTextView);
         clubsTV = (TextView) findViewById(R.id.clubsTextView);
         competitionTV = (TextView) findViewById(R.id.competitionTextView);
@@ -167,6 +177,366 @@ public class MainScreen extends AppCompatActivity {
         });
     }
 
+    private void setImagesAndInfos(){
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Match");
+        mDatabase.addValueEventListener(new ValueEventListener() {
+            String HomeTeam = null;
+            String AwayTeam = null;
+            String Info2 = null;
+            String Info3 = null;
+
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                HomeTeam = dataSnapshot.child("Home").getValue().toString();
+                AwayTeam = dataSnapshot.child("Away").getValue().toString();
+                Info2 = dataSnapshot.child("Info2").getValue().toString();
+                Info3 = dataSnapshot.child("Info3").getValue().toString();
+                clubsTV.setText("" + Info2);
+                competitionTV.setText("" + Info3);
+
+                switch (HomeTeam) {
+                    case "0":
+                        ImageHome.setImageResource(R.drawable.wno);
+                        break;
+                    case "1":
+                        ImageHome.setImageResource(R.drawable.wleipzignew);
+                        break;
+                    case "2":
+                        ImageHome.setImageResource(R.drawable.wberlin);
+                        break;
+                    case "3":
+                        ImageHome.setImageResource(R.drawable.wmainz);
+                        break;
+                    case "4":
+                        ImageHome.setImageResource(R.drawable.wdortmund);
+                        break;
+                    case "5":
+                        ImageHome.setImageResource(R.drawable.wnurnberg);
+                        break;
+                    case "6":
+                        ImageHome.setImageResource(R.drawable.whoffenheim);
+                        break;
+                    case "7":
+                        ImageHome.setImageResource(R.drawable.wleverkusen);
+                        break;
+                    case "8":
+                        ImageHome.setImageResource(R.drawable.wfreiburg);
+                        break;
+                    case "9":
+                        ImageHome.setImageResource(R.drawable.wfrankfurt);
+                        break;
+                    case "10":
+                        ImageHome.setImageResource(R.drawable.wwolfsburg);
+                        break;
+                    case "11":
+                        ImageHome.setImageResource(R.drawable.waugsburg);
+                        break;
+                    case "12":
+                        ImageHome.setImageResource(R.drawable.wdusseldorf);
+                        break;
+                    case "13":
+                        ImageHome.setImageResource(R.drawable.wstuttgart);
+                        break;
+                    case "14":
+                        ImageHome.setImageResource(R.drawable.whannover);
+                        break;
+                    case "15":
+                        ImageHome.setImageResource(R.drawable.wbremen);
+                        break;
+                    case "16":
+                        ImageHome.setImageResource(R.drawable.wgelsenkirchen);
+                        break;
+                    case "17":
+                        ImageHome.setImageResource(R.drawable.wmunchen);
+                        break;
+                    case "18":
+                        ImageHome.setImageResource(R.drawable.wgladbach);
+                        break;
+                    case "19":
+                        ImageHome.setImageResource(R.drawable.wsalzburg);
+                        break;
+                    case "20":
+                        ImageHome.setImageResource(R.drawable.wunion);
+                        break;
+                    case "21":
+                        ImageHome.setImageResource(R.drawable.wpaderborn);
+                        break;
+                    case "22":
+                        ImageHome.setImageResource(R.drawable.wkoln);
+                        break;
+                    case "23":
+                        ImageHome.setImageResource(R.drawable.whsv);
+                        break;
+                    case "24":
+                        ImageHome.setImageResource(R.drawable.wpauli);
+                        break;
+                    case "25":
+                        ImageHome.setImageResource(R.drawable.wbielefeld);
+                        break;
+                    case "26":
+                        ImageHome.setImageResource(R.drawable.waue);
+                        break;
+                    case "27":
+                        ImageHome.setImageResource(R.drawable.wdresden);
+                        break;
+                    case "28":
+                        ImageHome.setImageResource(R.drawable.wparis);
+                        break;
+                    case "29":
+                        ImageHome.setImageResource(R.drawable.wrealmadrid);
+                        break;
+                    case "30":
+                        ImageHome.setImageResource(R.drawable.watleticomadrid);
+                        break;
+                    case "31":
+                        ImageHome.setImageResource(R.drawable.wbarcelona);
+                        break;
+                    case "32":
+                        ImageHome.setImageResource(R.drawable.wtottenham);
+                        break;
+                    case "33":
+                        ImageHome.setImageResource(R.drawable.wmancity);
+                        break;
+                    case "34":
+                        ImageHome.setImageResource(R.drawable.wliverpool);
+                        break;
+                    case "35":
+                        ImageHome.setImageResource(R.drawable.wchelsea);
+                        break;
+                    case "36":
+                        ImageHome.setImageResource(R.drawable.wturin);
+                        break;
+                    case "37":
+                        ImageHome.setImageResource(R.drawable.wneapel);
+                        break;
+                    case "38":
+                        ImageHome.setImageResource(R.drawable.wintermailand);
+                        break;
+                    case "39":
+                        ImageHome.setImageResource(R.drawable.wajax);
+                        break;
+                    case "40":
+                        ImageHome.setImageResource(R.drawable.wdonezk);
+                        break;
+
+
+                    default:
+                        ImageHome.setImageResource(R.drawable.wno);
+                        break;
+                }
+
+                switch (AwayTeam) {
+                    case "0":
+                        ImageAway.setImageResource(R.drawable.wno);
+                        break;
+                    case "1":
+                        ImageAway.setImageResource(R.drawable.wleipzignew);
+                        break;
+                    case "2":
+                        ImageAway.setImageResource(R.drawable.wberlin);
+                        break;
+                    case "3":
+                        ImageAway.setImageResource(R.drawable.wmainz);
+                        break;
+                    case "4":
+                        ImageAway.setImageResource(R.drawable.wdortmund);
+                        break;
+                    case "5":
+                        ImageAway.setImageResource(R.drawable.wnurnberg);
+                        break;
+                    case "6":
+                        ImageAway.setImageResource(R.drawable.whoffenheim);
+                        break;
+                    case "7":
+                        ImageAway.setImageResource(R.drawable.wleverkusen);
+                        break;
+                    case "8":
+                        ImageAway.setImageResource(R.drawable.wfreiburg);
+                        break;
+                    case "9":
+                        ImageAway.setImageResource(R.drawable.wfrankfurt);
+                        break;
+                    case "10":
+                        ImageAway.setImageResource(R.drawable.wwolfsburg);
+                        break;
+                    case "11":
+                        ImageAway.setImageResource(R.drawable.waugsburg);
+                        break;
+                    case "12":
+                        ImageAway.setImageResource(R.drawable.wdusseldorf);
+                        break;
+                    case "13":
+                        ImageAway.setImageResource(R.drawable.wstuttgart);
+                        break;
+                    case "14":
+                        ImageAway.setImageResource(R.drawable.whannover);
+                        break;
+                    case "15":
+                        ImageAway.setImageResource(R.drawable.wbremen);
+                        break;
+                    case "16":
+                        ImageAway.setImageResource(R.drawable.wgelsenkirchen);
+                        break;
+                    case "17":
+                        ImageAway.setImageResource(R.drawable.wmunchen);
+                        break;
+                    case "18":
+                        ImageAway.setImageResource(R.drawable.wgladbach);
+                        break;
+                    case "19":
+                        ImageAway.setImageResource(R.drawable.wsalzburg);
+                        break;
+                    case "20":
+                        ImageAway.setImageResource(R.drawable.wunion);
+                        break;
+                    case "21":
+                        ImageAway.setImageResource(R.drawable.wpaderborn);
+                        break;
+                    case "22":
+                        ImageAway.setImageResource(R.drawable.wkoln);
+                        break;
+                    case "23":
+                        ImageAway.setImageResource(R.drawable.whsv);
+                        break;
+                    case "24":
+                        ImageAway.setImageResource(R.drawable.wpauli);
+                        break;
+                    case "25":
+                        ImageAway.setImageResource(R.drawable.wbielefeld);
+                        break;
+                    case "26":
+                        ImageAway.setImageResource(R.drawable.waue);
+                        break;
+                    case "27":
+                        ImageAway.setImageResource(R.drawable.wdresden);
+                        break;
+                    case "28":
+                        ImageAway.setImageResource(R.drawable.wparis);
+                        break;
+                    case "29":
+                        ImageAway.setImageResource(R.drawable.wrealmadrid);
+                        break;
+                    case "30":
+                        ImageAway.setImageResource(R.drawable.watleticomadrid);
+                        break;
+                    case "31":
+                        ImageAway.setImageResource(R.drawable.wbarcelona);
+                        break;
+                    case "32":
+                        ImageAway.setImageResource(R.drawable.wtottenham);
+                        break;
+                    case "33":
+                        ImageAway.setImageResource(R.drawable.wmancity);
+                        break;
+                    case "34":
+                        ImageAway.setImageResource(R.drawable.wliverpool);
+                        break;
+                    case "35":
+                        ImageAway.setImageResource(R.drawable.wchelsea);
+                        break;
+                    case "36":
+                        ImageAway.setImageResource(R.drawable.wturin);
+                        break;
+                    case "37":
+                        ImageAway.setImageResource(R.drawable.wneapel);
+                        break;
+                    case "38":
+                        ImageAway.setImageResource(R.drawable.wintermailand);
+                        break;
+                    case "39":
+                        ImageAway.setImageResource(R.drawable.wajax);
+                        break;
+                    case "40":
+                        ImageAway.setImageResource(R.drawable.wdonezk);
+                        break;
+
+
+                    default:
+                        ImageAway.setImageResource(R.drawable.wrbl);
+                        break;
+                }
+
+            }
+
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    private void setCountdown(){
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Match");
+        mDatabase.keepSynced(true);
+
+
+        mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String Info = null;
+                Info = dataSnapshot.child("Info").getValue().toString();
+
+                SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy, HH:mm");
+                String oldTime = formatter.format(new Date());
+                String NewTime = dataSnapshot.child("Info").getValue().toString();
+                Date oldDate, newDate;
+                try {
+                    oldDate = formatter.parse(oldTime);
+                    newDate = formatter.parse(NewTime);
+                    oldLong = oldDate.getTime();
+                    NewLong = newDate.getTime();
+                    diff = NewLong - oldLong;
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                counter = new MyCount2(diff, 1000);
+                counter.start();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    public class MyCount2 extends CountDownTimer {
+        MyCount2(long millisInFuture, long countDownInterval) {
+            super(millisInFuture, countDownInterval);
+        }
+
+        @Override
+        public void onFinish() {
+            countdownTV.setText("L  I  V  E");
+        }
+
+        @Override
+        public void onTick(long millisUntilFinished) {
+            long millis = millisUntilFinished;
+
+
+            long days = TimeUnit.MILLISECONDS.toDays(millis);
+            long hours = TimeUnit.MILLISECONDS.toHours(millis) - TimeUnit.DAYS.toHours(TimeUnit.MILLISECONDS.toDays(millis));
+            long minutes = TimeUnit.MILLISECONDS.toMinutes(millis) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millis));
+            long sec = TimeUnit.MILLISECONDS.toSeconds(millis) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis));
+
+            if (days==0 && hours!=0 && minutes!=0){
+                countdownTV.setText(hours+"h "+minutes+"m "+sec+"s");
+            }else if(days==0 && hours==0 && minutes!=0){
+                countdownTV.setText(minutes+"m "+sec+"s");
+            }else if(days==0 && hours==0 &&minutes==0){
+                countdownTV.setText(sec+"s");
+            }else {
+                countdownTV.setText(days+"d "+hours+"h "+minutes+"m "+sec+"s");
+            }
+
+        }
+
+
+    }
+
+
 }
 
 class Adapter extends FragmentStateAdapter {
@@ -193,3 +563,4 @@ class Adapter extends FragmentStateAdapter {
         return fragmentList.size();
     }
 }
+
