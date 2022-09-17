@@ -25,7 +25,7 @@
         android:id="@+id/clicktv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/secondaryDarkColor"
+        android:background="@color/secondaryLightColor"
         android:gravity="center"
         android:text="1 Aufrufe"
         android:textColor="@color/primaryTextColor"

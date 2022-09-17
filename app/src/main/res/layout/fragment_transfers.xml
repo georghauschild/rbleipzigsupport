@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
     android:orientation="vertical"
     android:weightSum="100"
     tools:context=".ui.transfers.TransfersFragment">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Transferneuigkeiten"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="8dp" />
 
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
         android:layout_weight="100"
         app:layout_constraintBottom_toTopOf="@+id/textView26"
         app:layout_constraintEnd_toEndOf="@id/textView26"
@@ -22,13 +34,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -36,6 +47,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/secondaryDarkColor"
+                    android:fontFamily="sans-serif-black"
                     android:padding="10dp"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="16sp" />
@@ -53,7 +65,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -61,6 +73,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/secondaryDarkColor"
+                    android:fontFamily="sans-serif-black"
                     android:padding="10dp"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="16sp" />
@@ -78,7 +91,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -86,6 +99,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/secondaryDarkColor"
+                    android:fontFamily="sans-serif-black"
                     android:padding="10dp"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="16sp" />
@@ -103,7 +117,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -111,6 +125,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/secondaryDarkColor"
+                    android:fontFamily="sans-serif-black"
                     android:padding="10dp"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="16sp" />
@@ -128,7 +143,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -136,6 +151,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/secondaryDarkColor"
+                    android:fontFamily="sans-serif-black"
                     android:padding="10dp"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="16sp" />
@@ -153,7 +169,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -161,6 +177,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/secondaryDarkColor"
+                    android:fontFamily="sans-serif-black"
                     android:padding="10dp"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="16sp" />
@@ -178,7 +195,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -186,6 +203,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/secondaryDarkColor"
+                    android:fontFamily="sans-serif-black"
                     android:padding="10dp"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="16sp" />
@@ -203,7 +221,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -211,6 +229,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/secondaryDarkColor"
+                    android:fontFamily="sans-serif-black"
                     android:padding="10dp"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="16sp" />
@@ -228,7 +247,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -236,6 +255,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/secondaryDarkColor"
+                    android:fontFamily="sans-serif-black"
                     android:padding="10dp"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="16sp" />
@@ -253,7 +273,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -261,6 +281,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/secondaryDarkColor"
+                    android:fontFamily="sans-serif-black"
                     android:padding="10dp"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="16sp" />
@@ -273,23 +294,23 @@
                     android:padding="10dp"
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right"
+                    android:text="Quelle: rb-fans.de"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:textSize="10sp" />
+
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
-
-    <TextView
-        android:id="@+id/textView26"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="100"
-        android:background="@color/colorPrimaryDark"
-        android:gravity="right"
-        android:text="Quelle: rb-fans.de    "
-        android:textColor="@color/secondaryDarkColor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
@@ -305,4 +326,4 @@
         app:lottie_fileName="loading3.json"
         app:lottie_loop="true" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

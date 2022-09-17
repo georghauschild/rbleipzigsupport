@@ -1,6 +1,6 @@
 package silverbeach.rbleipzigsupport.ui.match;
 
-class Comment {
+public class Comment {
 
     private String commentText, user, uid;
 

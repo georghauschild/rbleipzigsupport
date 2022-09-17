@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/x"
+    android:background="@color/primaryTextColor"
     android:orientation="vertical"
     tools:context=".RegisterActivity">
 
@@ -12,41 +12,50 @@
         android:id="@+id/register_display_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColorHint="@color/primaryTextColor">
+        android:textColorHint="@color/colorPrimaryDark">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Mit diesem Namen wirst du in der App für Andere angezeigt"
+            android:textColor="@android:color/black" />
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Anzeigename"
-            android:textColor="@color/primaryTextColor" />
+            android:textColor="@android:color/black" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/register_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColorHint="@color/primaryTextColor">
+        android:textColorHint="@color/colorPrimaryDark">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
             android:inputType="textEmailAddress"
-            android:textColor="@color/primaryTextColor" />
+            android:textColor="@android:color/black" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/reg_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColorHint="@color/primaryTextColor">
+        android:textColorHint="@color/colorPrimaryDark">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Passwort"
             android:inputType="textPassword"
-            android:textColor="@color/primaryTextColor" />
+            android:textColor="@android:color/black" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -54,12 +63,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="@color/secondaryTextColor"
-        android:text="Account erstellen" />
+        android:backgroundTint="@color/secondaryDarkColor"
+        android:text="Account erstellen"
+        android:textColor="@android:color/background_light" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/wleipzig" />
+        app:srcCompat="@drawable/wleipzignew" />
 </android.widget.LinearLayout>

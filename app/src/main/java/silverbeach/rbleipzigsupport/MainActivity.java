@@ -1,15 +1,11 @@
 package silverbeach.rbleipzigsupport;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.FragmentManager;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
-import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -21,20 +17,16 @@ import com.google.firebase.database.ServerValue;
 import com.google.firebase.database.ValueEventListener;
 
 
-import androidx.drawerlayout.widget.DrawerLayout;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.os.VibrationEffect;
 import android.util.Log;
-import android.view.Menu;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Toast;
 
 import hotchemi.android.rate.AppRate;
 import hotchemi.android.rate.OnClickButtonListener;
+import android.os.Vibrator;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -71,11 +63,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 pager2.setCurrentItem(tab.getPosition());
+
+
             }
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-
+                Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                v.vibrate(VibrationEffect.createOneShot(1,75));
             }
 
             @Override
@@ -140,6 +135,10 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             });
+        }else {
+            Intent startIntent = new Intent(MainActivity.this, StartActivity.class);
+            startActivity(startIntent);
+            finish();
         }
 
         AppRate.with(this)
@@ -159,17 +158,17 @@ public class MainActivity extends AppCompatActivity {
         // Show a dialog if meets conditions
         AppRate.showRateDialogIfMeetsConditions(this);
 
+        Intent startIntent = new Intent(MainActivity.this, MainScreen.class);
+        startActivity(startIntent);
+        finish();
+
     }
-
-
-
 
 
     @Override
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
-
 
         if(mAuth.getCurrentUser() == null){
             sendToStart();

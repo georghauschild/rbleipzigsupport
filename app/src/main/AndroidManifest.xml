@@ -3,6 +3,7 @@
     package="silverbeach.rbleipzigsupport">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.profile.ImageProfileActivity"></activity>
+        <activity
+            android:name=".ui.profile.MyProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MatchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PostsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainScreen"
+            android:exported="false" />
+        <activity android:name=".ui.profile.ImageProfileActivity" />
         <activity android:name=".IntroActivity" />
         <activity android:name=".ui.survey.SurveyResultActivity" />
         <activity android:name=".ui.match.CreateMatchActivity" />

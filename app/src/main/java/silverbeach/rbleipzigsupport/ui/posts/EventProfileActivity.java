@@ -3,7 +3,6 @@ package silverbeach.rbleipzigsupport.ui.posts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -17,7 +16,6 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -25,7 +23,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -90,7 +87,7 @@ public class EventProfileActivity extends AppCompatActivity {
         comment = new Comment();
         list = new ArrayList<>();
         uid_list = new ArrayList<>();
-        adapter = new ArrayAdapter<String>(this,R.layout.comment, R.id.commentText, list);
+        adapter = new ArrayAdapter<String>(this,R.layout.comment2, R.id.commentText, list);
 
 
         checkConnection();

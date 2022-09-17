@@ -4,79 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/x"
+    android:background="@color/secondaryTextColor"
     tools:context="silverbeach.rbleipzigsupport.StartActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/start_login_btn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="150dp"
-        android:text="Wilkommen"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/start_login_btn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="75dp"
-        android:text="Hast du schon einen Account?"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="22sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/start_login_btn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="-200dp"
-        android:padding="20dp"
-        android:text="RB Leipzig Support ist kostenlos und beinhaltet keine Werbung."
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="18sp" />
-
-    <Button
-        android:id="@+id/start_reg_btn"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="163dp"
-        android:backgroundTint="@android:color/holo_red_dark"
-        android:paddingLeft="25dp"
-        android:paddingRight="25dp"
-        android:text="Nein"
-        android:textColor="@android:color/background_light" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/start_login_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/start_reg_btn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="@color/secondaryLightColor"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:text="Ja"
-        android:textColor="@color/primaryTextColor" />
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/wleipzignew" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView"
-        android:layout_marginBottom="50dp"
-        app:srcCompat="@drawable/wleipzig" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="Willkommen in der RB Leipzig Fan App"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Hast du schon einen Account?"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/start_login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/secondaryLightColor"
+            android:text="Ja"
+            android:textColor="@color/primaryTextColor" />
+
+        <Button
+            android:id="@+id/start_reg_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/secondaryDarkColor"
+            android:text="Nein"
+            android:textColor="@android:color/background_light" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="RB Leipzig Support ist kostenlos und beinhaltet keine Werbung. Deine Daten werden auf keinen Fall mit Dritten geteilt."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
 
 </RelativeLayout>
