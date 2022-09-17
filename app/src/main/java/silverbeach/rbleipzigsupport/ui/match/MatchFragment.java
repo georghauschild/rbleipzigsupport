@@ -116,7 +116,6 @@ public class MatchFragment extends Fragment {
                     Intent newIntentA = new Intent(getActivity(), MainScreen.class);
                     startActivity(newIntentA);
 
-
                 }
                 return false;
             }

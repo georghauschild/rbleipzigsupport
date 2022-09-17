@@ -22,7 +22,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -70,6 +72,12 @@ public class MainScreen extends AppCompatActivity {
         bottomViewPager2 = findViewById(R.id.bottomViewPager2);
         listView = findViewById(R.id.listView);
 
+        if (FirebaseAuth.getInstance().getCurrentUser()==null){
+
+            Intent startIntent = new Intent(MainScreen.this, StartActivity.class);
+            startActivity(startIntent);
+            finish();        }else{
+        }
         setImagesAndInfos();
         setCountdown();
 
@@ -135,6 +143,16 @@ public class MainScreen extends AppCompatActivity {
 
 
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (counter!=null){
+            counter.cancel();
+        }
+        setCountdown();
+    }
+
     private void setComments(){
         //comments
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Match").child("comments");
@@ -318,7 +336,12 @@ public class MainScreen extends AppCompatActivity {
                     case "40":
                         ImageHome.setImageResource(R.drawable.wdonezk);
                         break;
-
+                    case "41":
+                        ImageHome.setImageResource(R.drawable.wbochum);
+                        break;
+                    case "42":
+                        ImageHome.setImageResource(R.drawable.wceltic);
+                        break;
 
                     default:
                         ImageHome.setImageResource(R.drawable.wno);
@@ -449,8 +472,12 @@ public class MainScreen extends AppCompatActivity {
                     case "40":
                         ImageAway.setImageResource(R.drawable.wdonezk);
                         break;
-
-
+                    case "41":
+                        ImageAway.setImageResource(R.drawable.wbochum);
+                        break;
+                    case "42":
+                        ImageAway.setImageResource(R.drawable.wceltic);
+                        break;
                     default:
                         ImageAway.setImageResource(R.drawable.wrbl);
                         break;
@@ -490,6 +517,7 @@ public class MainScreen extends AppCompatActivity {
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
+
                 counter = new MyCount2(diff, 1000);
                 counter.start();
             }
@@ -508,7 +536,7 @@ public class MainScreen extends AppCompatActivity {
 
         @Override
         public void onFinish() {
-            countdownTV.setText("L  I  V  E");
+            countdownTV.setText("L\nI\nV\nE");
         }
 
         @Override
@@ -522,13 +550,13 @@ public class MainScreen extends AppCompatActivity {
             long sec = TimeUnit.MILLISECONDS.toSeconds(millis) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis));
 
             if (days==0 && hours!=0 && minutes!=0){
-                countdownTV.setText(hours+"h "+minutes+"m "+sec+"s");
+                countdownTV.setText(hours+"h\n"+minutes+"m\n"+sec+"s");
             }else if(days==0 && hours==0 && minutes!=0){
-                countdownTV.setText(minutes+"m "+sec+"s");
+                countdownTV.setText(minutes+"m\n"+sec+"s");
             }else if(days==0 && hours==0 &&minutes==0){
                 countdownTV.setText(sec+"s");
             }else {
-                countdownTV.setText(days+"d "+hours+"h "+minutes+"m "+sec+"s");
+                countdownTV.setText(days+"d\n"+hours+"h\n"+minutes+"m\n"+sec+"s");
             }
 
         }

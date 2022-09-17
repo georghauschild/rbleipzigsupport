@@ -135,6 +135,10 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             });
+        }else {
+            Intent startIntent = new Intent(MainActivity.this, StartActivity.class);
+            startActivity(startIntent);
+            finish();
         }
 
         AppRate.with(this)
@@ -153,6 +157,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Show a dialog if meets conditions
         AppRate.showRateDialogIfMeetsConditions(this);
+
+        Intent startIntent = new Intent(MainActivity.this, MainScreen.class);
+        startActivity(startIntent);
+        finish();
 
     }
 

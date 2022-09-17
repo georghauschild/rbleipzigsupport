@@ -75,18 +75,17 @@ public class RegisterActivity extends AppCompatActivity {
                 String email = mEmail.getEditText().getText().toString();
                 String password = mPassword.getEditText().getText().toString();
 
-                if(!TextUtils.isEmpty(display_name) || !TextUtils.isEmpty(email) || !TextUtils.isEmpty(password)){
+                if(display_name.trim()==null || email.trim()==null || password.trim()==null){
+                    Toast.makeText(RegisterActivity.this, "Bitte alle Felder ausfüllen",
+                            Toast.LENGTH_LONG).show();
 
+                }else {
                     mRegProgress.setTitle("Registrierung");
                     mRegProgress.setMessage("Dein RB Leipzig Support Account wird erstellt");
                     mRegProgress.setCanceledOnTouchOutside(false);
                     mRegProgress.show();
 
                     register_user(display_name, email, password);
-
-                }else {
-                    Toast.makeText(RegisterActivity.this, "Bitte alle Felder ausfüllen",
-                            Toast.LENGTH_LONG).show();
                 }
 
 
@@ -104,7 +103,6 @@ public class RegisterActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 if(task.isSuccessful()){
-
 
                     FirebaseUser current_user = FirebaseAuth.getInstance().getCurrentUser();
                     String uid = current_user.getUid();

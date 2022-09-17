@@ -37,12 +37,13 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:autoSizeTextType="uniform"
-                    android:fontFamily="sans-serif-black"
+                    android:fontFamily="monospace"
                     android:gravity="center_horizontal|center_vertical"
-                    android:text="1d 22h 18m 29s"
+                    android:includeFontPadding="false"
                     android:textAlignment="center"
                     android:textColor="@color/primaryTextColor"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/ImageAway"
@@ -50,7 +51,7 @@
                     android:layout_height="150dp"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/wbarcelona" />
+                    app:srcCompat="@drawable/wleipzignew" />
             </LinearLayout>
 
             <TextView
@@ -59,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/primaryTextColor"
                 android:gravity="center"
-                android:text="Paris - Dortund"
+                android:text="RB Leipzig Support App"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/secondaryLightColor"
                 android:gravity="center"
-                android:text="Champions League, Mittwoch 21:00 Uhr"
+                android:text="Bitte überprüfen Sie die Internetverbindung"
                 android:textColor="@color/primaryTextColor"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"

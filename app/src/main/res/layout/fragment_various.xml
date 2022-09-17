@@ -35,6 +35,13 @@
             android:text="Bitte App bewerten"
             android:textColor="@color/primaryTextColor" />
 
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primaryTextColor"
+            android:text="Abmelden" />
+
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="match_parent"

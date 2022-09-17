@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
     tools:context=".CreateMatchActivity">
 
     <TextView
@@ -15,10 +14,10 @@
         android:layout_alignParentTop="true"
         android:gravity="center_horizontal"
         android:text="@string/wappen"
-        android:textColor="@color/primaryTextColor"
+        android:textColor="@android:color/black"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_delete" />
 
@@ -31,6 +30,7 @@
         android:ems="10"
         android:hint="Heimteam"
         android:inputType="number"
+        android:text="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -44,6 +44,7 @@
         android:ems="10"
         android:hint="Auswärtsteam"
         android:inputType="number"
+        android:text="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextHome" />
@@ -70,6 +71,7 @@
         android:ems="10"
         android:hint="Vereinsnamen (Leipzig - Dresden)"
         android:inputType="text"
+        android:text="Leipzig - Leipzig"
         app:layout_constraintTop_toBottomOf="@+id/editTextInfo"
         tools:layout_editor_absoluteX="16dp" />
 
@@ -82,6 +84,7 @@
         android:ems="10"
         android:hint="Bundesliga, Samstag 15:30 Uhr"
         android:inputType="text"
+        android:text="Bundesliga, Samstag 15:30 Uhr"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,7 +92,7 @@
 
     <Button
         android:id="@+id/buttonGo"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editTextAway"
         android:layout_alignParentStart="true"
@@ -100,9 +103,10 @@
 
     <Button
         android:id="@+id/button_delete"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/buttonGo"
+        android:layout_marginTop="50dp"
         android:text="Kommentare löschen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

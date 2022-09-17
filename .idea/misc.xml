@@ -8,8 +8,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/georg/AndroidStudioProjects/rbleipzigsupport/app/src/main/res/layout/activity_create_match.xml" value="0.4" />
         <entry key="..\:/Users/georg/AndroidStudioProjects/rbleipzigsupport/app/src/main/res/layout/activity_event_profile.xml" value="0.4" />
         <entry key="..\:/Users/georg/AndroidStudioProjects/rbleipzigsupport/app/src/main/res/layout/activity_intro.xml" value="0.4" />
+        <entry key="..\:/Users/georg/AndroidStudioProjects/rbleipzigsupport/app/src/main/res/layout/activity_login.xml" value="0.4" />
         <entry key="..\:/Users/georg/AndroidStudioProjects/rbleipzigsupport/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/Users/georg/AndroidStudioProjects/rbleipzigsupport/app/src/main/res/layout/activity_main_screen.xml" value="0.4" />
         <entry key="..\:/Users/georg/AndroidStudioProjects/rbleipzigsupport/app/src/main/res/layout/activity_match.xml" value="0.3859375" />
