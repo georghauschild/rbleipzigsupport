@@ -1,10 +1,7 @@
 # RB Leipzig Support App
 It is an android app for fans of the german football club "RB Leipzig". It was released on february 2017 and gained some big updates until 2022.
-This project is not actively maintained anymore besides hotfixes and in-app updates. I used this app to teach myself android programming.
-It may contain some flaws like
-hardcoded strings. RB Leipzig has recognized this app as a fan project and allows the use of the brand name. For more information please visit the store page.
-
-**CURRENT STATUS OF THE APP: WORKING**
+This project is actively maintained with patches and in-app updates. I used this app to teach myself android programming.
+It may contain some flaws like hardcoded strings. RB Leipzig has recognized this app as a fan project and allows the use of the brand name. For more information please visit the store page.
 
 
 Release: https://play.google.com/store/apps/details?id=silverbeach.rbleipzigsupport
